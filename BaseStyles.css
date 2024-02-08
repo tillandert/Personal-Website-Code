@@ -9,7 +9,7 @@ body, h1, p {
 /* Set font and background color */
 body {
   font-family: Arial, sans-serif;
-  background-color: #3a26f77e;
+  background-color: rgb(245, 245, 245);
 }
 
 /* Center content */
