@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <button>Professional Experience</button>
+        <button>Projects</button>
+        <button>Education</button>
+        <button>Personal Life</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+
+      <div style={{ marginTop: '50px', textAlign: 'center'}}>
+        <h1 style={{fontSize: '30px'}}>Welcome to Taylor Tillander's Personal Website!</h1>
+      </div>
+
+      <div style={{ marginTop: '50px', textAlign: 'center' }}>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          I am currently a third-year student studying computer engineering at the University of Florida. I am interested
+          in many areas of computer science and electrical and computer engineering. Outside of school, I am a technical
+          supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena. In my free time, I
+          enjoy working out, running, kickboxing, tennis, and video games.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <iframe src="https://drive.google.com/file/d/1znxd-zL1JcuVz7zVPG7cfHsxg5BYJe2i/preview" width="640" height="480" allow="autoplay"></iframe>
+      </div>
+
+      <div style={{ marginTop: '50px', marginBottom: '50px', textAlign: 'center' }}>
+        <p>More to be added soon.</p>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
