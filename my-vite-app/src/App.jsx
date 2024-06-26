@@ -1,10 +1,26 @@
 import { useState } from 'react';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Education from './pages/Education';
+import Home from './pages/Home';
+import Personal_Life from './pages/Personal_Life';
+import Professional_Experience from './pages/Professional_Experience';
+import Projects from './pages/Projects';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    // <Router>
+    //   <Routes>
+    //     <Route path="/" element={<Education />} />
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/" element={<Personal_Life />} />
+    //     <Route path="/" element={<Professional_Experience />} />
+    //     <Route path="/" element={<Projects />} />
+    //   </Routes>
+    // </Router>
+
     <div>
       <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <button>Professional Experience</button>
@@ -35,6 +51,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
