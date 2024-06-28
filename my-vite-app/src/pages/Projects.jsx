@@ -5,7 +5,7 @@ const Projects = () => {
 const navigate = useNavigate();
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', position: 'fixed' }}>
             <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <button onClick={() => navigate('/Professional_Experience')}>Professional Experience</button>
                 <button onClick={() => navigate('/')}>Home</button>
