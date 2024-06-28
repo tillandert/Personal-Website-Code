@@ -8,7 +8,7 @@ const navigate = useNavigate();
         <div>
             <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <button onClick={() => navigate('/Professional_Experience')}>Professional Experience</button>
-                <button onClick={() => navigate('/Home')}>Home</button>
+                <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Education')}>Education</button>
                 <button onClick={() => navigate('/Personal_Life')}>Personal Life</button>
             </div>

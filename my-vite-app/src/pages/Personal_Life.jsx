@@ -10,7 +10,7 @@ const navigate = useNavigate();
                 <button onClick={() => navigate('/Professional_Experience')}>Professional Experience</button>
                 <button onClick={() => navigate('/Projects')}>Projects</button>
                 <button onClick={() => navigate('/Education')}>Education</button>
-                <button onClick={() => navigate('/Home')}>Home</button>
+                <button onClick={() => navigate('/')}>Home</button>
             </div>
 
             <div style={{ marginTop: '50px', marginBottom: '50px', textAlign: 'center' }}>
