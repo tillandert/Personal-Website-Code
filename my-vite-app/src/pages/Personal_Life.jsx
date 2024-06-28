@@ -5,7 +5,7 @@ const Personal_Life = () => {
     const navigate = useNavigate();
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', position: 'fixed' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ marginTop: '20px' }}>
                 <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Education')}>Education</button>

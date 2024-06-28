@@ -6,8 +6,14 @@ body, h1, p {
 
 /* Set font and background color */
 body {
+  padding-top: 20px;
   font-family: Arial, sans-serif;
   background: linear-gradient(to top, rgb(194, 235, 248), white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
 /* Center content */
