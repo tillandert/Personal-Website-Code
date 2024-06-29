@@ -5,7 +5,7 @@ const Home = () => {
 const navigate = useNavigate();
 
     return (
-        <div>
+        <div style={{ justifyContent: 'center' }}>
             <div>
                 <button onClick={() => navigate('/Education')}>Education</button>
                 <button onClick={() => navigate('/Personal_Life')}>Personal Life</button>
