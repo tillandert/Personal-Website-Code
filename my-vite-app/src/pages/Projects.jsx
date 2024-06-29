@@ -14,6 +14,12 @@ const navigate = useNavigate();
             </div>
 
             <div style={{ marginTop: '50px' }}>
+                <a href="https://github.com/tillandert" target="_blank" rel="noopener noreferrer">Click here to see my GitHub projects.</a>
+            </div>
+
+            
+
+            <div style={{ marginTop: '50px' }}>
                 <p>More to be added soon.</p>
             </div>
         </div>

@@ -15,8 +15,7 @@ const navigate = useNavigate();
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    Outside of school, I am a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena. In my free time, I
-                    enjoy working out, running, kickboxing, tennis, and video games.
+                    Outside of school, I am a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena.
                 </p>
             </div>
 
