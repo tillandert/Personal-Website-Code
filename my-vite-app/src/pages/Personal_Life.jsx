@@ -13,6 +13,12 @@ const Personal_Life = () => {
                 <button onClick={() => navigate('/Projects')}>Projects</button>
             </div>
 
+            <div style={{ marginTop: '50px', textAlign: 'center' }}>
+                <p>
+                    In my free time, I enjoy working out, running, kickboxing, tennis, and video games.
+                </p>
+            </div>
+
             <div style={{ marginTop: '50px' }}>
                 <p>More to be added soon.</p>
             </div>
