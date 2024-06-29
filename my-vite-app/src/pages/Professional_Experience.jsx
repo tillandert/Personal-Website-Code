@@ -15,8 +15,12 @@ const navigate = useNavigate();
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    Outside of school, I am a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena.
+                    Outside of school, I am a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena. I have also had two software engineering internships the past couple summers, first at Datamaxx doing primarily frontend development and then at Kratos doing scripting to run simulations.
                 </p>
+            </div>
+
+            <div style={{ marginTop: '50px' }}>
+                <a href="https://linkedin.com/in/tillandert" target="_blank" rel="noopener noreferrer">Click here to visit my LinkedIn page.</a>
             </div>
 
             <div style={{ marginTop: '50px' }}>
