@@ -15,8 +15,8 @@ const navigate = useNavigate();
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    I am currently a third-year student studying computer engineering at the University of Florida. I am interested
-                    in many areas of computer science and electrical and computer engineering.
+                    I am currently a fourth-year student studying computer engineering at the University of Florida. I am interested
+                    in many areas of computer science and electrical and computer engineering, namely software engineering, signal processing, and AI.
                 </p>
             </div>
 
