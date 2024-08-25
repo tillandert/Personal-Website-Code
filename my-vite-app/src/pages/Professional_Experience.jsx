@@ -20,7 +20,7 @@ const navigate = useNavigate();
             </div>
 
             <div style={{ marginTop: '50px' }}>
-                <a href="https://linkedin.com/in/tillandert" target="_blank" rel="noopener noreferrer">Click here to visit my LinkedIn page.</a>
+                <a href="https://www.linkedin.com/in/taylortillander/" target="_blank" rel="noopener noreferrer">Click here to visit my LinkedIn page.</a>
             </div>
 
             <div style={{ marginTop: '50px' }}>

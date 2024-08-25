@@ -15,7 +15,7 @@ const Personal_Life = () => {
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    In my free time, I enjoy working out, running, kickboxing, tennis, and video games.
+                    In my free time, I enjoy working out, running, kickboxing, tennis, and video games. My main fitness goal currently is to be able to run a mile at a 6-minute pace and hit 175 lbs whilst still building muscle.
                 </p>
             </div>
 
