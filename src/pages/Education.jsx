@@ -19,10 +19,6 @@ const navigate = useNavigate();
                     in many areas of computer science and electrical and computer engineering, namely software engineering, signal processing, and AI.
                 </p>
             </div>
-
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
-            </div>
         </div>
     );
 };

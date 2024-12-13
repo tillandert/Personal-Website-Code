@@ -38,10 +38,6 @@ const navigate = useNavigate();
             <div style={{ marginTop: '50px' }}>
                 <iframe src="https://drive.google.com/file/d/1znxd-zL1JcuVz7zVPG7cfHsxg5BYJe2i/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
-
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
-            </div>
         </div>
     );
 };
