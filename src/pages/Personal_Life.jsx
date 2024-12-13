@@ -15,12 +15,24 @@ const Personal_Life = () => {
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    In my free time, I enjoy working out, running, kickboxing, tennis, and video games. My main fitness goal currently is to be able to run a mile at a 6-minute pace and hit 175 lbs whilst still building muscle.
+                    In my free time, I enjoy working out, running, kickboxing, tennis, and video games. I have recently broken a sub six minute mile and am working on breaking a sub 20 minute 5k while still building muscle and going to the gym consistently.
                 </p>
             </div>
 
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
+            <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                <a href="https://www.instagram.com/tillander_t"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style={{ textDecoration: 'none', color: 'black' }}
+                >
+                    <div>Follow me on Instagram!</div>
+                    
+                    <img 
+                        src="/instagram_qr.png"
+                        alt="Instagram QR Code" 
+                        style={{ width: '200px', marginTop: '10px' }} 
+                    />
+                </a>
             </div>
         </div>
     );

@@ -15,20 +15,28 @@ const navigate = useNavigate();
 
             <div style={{ marginTop: '50px' }}>
                 <p>
-                    Outside of school, I am a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena. I have also had two software engineering internships the past couple summers, first at Datamaxx doing primarily frontend development and then at Kratos doing scripting to run simulations.
+                    I currently work part time as a technical supervisor at the Stephen C. O'Connell Center, UF's basketball/volleyball/gymnastics arena. Next summer, I will be working as a software engineering intern at BNY Mellon. I have also had two software engineering internships the past couple summers, first at Datamaxx doing primarily frontend development and then at Kratos doing scripting to run simulations.
                 </p>
-            </div>
-
-            <div style={{ marginTop: '50px' }}>
-                <a href="https://www.linkedin.com/in/taylortillander/" target="_blank" rel="noopener noreferrer">Click here to visit my LinkedIn page.</a>
             </div>
 
             <div style={{ marginTop: '50px' }}>
                 <iframe src="https://drive.google.com/file/d/1znxd-zL1JcuVz7zVPG7cfHsxg5BYJe2i/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
 
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
+            <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                <a href="https://www.linkedin.com/in/taylortillander/"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style={{ textDecoration: 'none', color: 'black' }}
+                >
+                    <div>Connect with me on LinkedIn!</div>
+                    
+                    <img 
+                        src="/linkedin_qr.jpeg"
+                        alt="Linkedin QR Code" 
+                        style={{ width: '200px', marginTop: '10px' }} 
+                    />
+                </a>
             </div>
         </div>
     );
