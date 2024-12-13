@@ -16,10 +16,6 @@ const navigate = useNavigate();
             <div style={{ marginTop: '50px' }}>
                 <h1 style={{fontSize: '30px'}}>Welcome to Taylor Tillander's Personal Website!</h1>
             </div>
-
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
-            </div>
         </div>
     );
 };
