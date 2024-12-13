@@ -19,8 +19,20 @@ const navigate = useNavigate();
                 </p>
             </div>
 
-            <div style={{ marginTop: '50px' }}>
-                <a href="https://www.linkedin.com/in/taylortillander/" target="_blank" rel="noopener noreferrer">Click here to visit my LinkedIn page.</a>
+            <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                <a href="https://www.linkedin.com/in/taylortillander/"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style={{ textDecoration: 'none', color: 'black' }}
+                >
+                    <div>Connect with me on LinkedIn!</div>
+                    
+                    <img 
+                        src="/linkedin_qr.jpeg"
+                        alt="Linkedin QR Code" 
+                        style={{ width: '200px', marginTop: '10px' }} 
+                    />
+                </a>
             </div>
 
             <div style={{ marginTop: '50px' }}>

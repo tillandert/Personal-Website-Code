@@ -19,8 +19,20 @@ const Personal_Life = () => {
                 </p>
             </div>
 
-            <div style={{ marginTop: '50px' }}>
-                <p>More to be added soon.</p>
+            <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                <a href="https://www.instagram.com/tillander_t"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style={{ textDecoration: 'none', color: 'black' }}
+                >
+                    <div>Follow me on Instagram!</div>
+                    
+                    <img 
+                        src="/instagram_qr.png"
+                        alt="Instagram QR Code" 
+                        style={{ width: '200px', marginTop: '10px' }} 
+                    />
+                </a>
             </div>
         </div>
     );
