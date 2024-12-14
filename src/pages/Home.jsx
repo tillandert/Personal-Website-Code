@@ -6,15 +6,15 @@ const navigate = useNavigate();
 
     return (
         <div style={{ justifyContent: 'center' }}>
-            <div>
+            <div style={{ marginTop: '125px' }}>
+                <h1 style={{fontSize: '40px'}}>Welcome to Taylor Tillander's Personal Website!</h1>
+            </div>
+
+            <div style={{ marginTop: '150px' }}>
                 <button onClick={() => navigate('/Education')}>Education</button>
                 <button onClick={() => navigate('/Personal_Life')}>Personal Life</button>
                 <button onClick={() => navigate('/Professional_Experience')}>Professional Experience</button>
                 <button onClick={() => navigate('/Projects')}>Projects</button>
-            </div>
-
-            <div style={{ marginTop: '50px' }}>
-                <h1 style={{fontSize: '30px'}}>Welcome to Taylor Tillander's Personal Website!</h1>
             </div>
         </div>
     );
