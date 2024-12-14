@@ -8,7 +8,7 @@ body, h1, h2, p {
 body {
   padding: 20px;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to top, rgb(194, 235, 248), white);
+  background: linear-gradient(to top, rgb(0, 151, 197), rgb(172, 236, 255));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
