@@ -5,7 +5,7 @@ const Projects = () => {
 const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="container">
             <div>
                 <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Education')}>Education</button>

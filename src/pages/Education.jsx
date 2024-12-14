@@ -5,7 +5,7 @@ const Education = () => {
 const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="container">
             <div>
                 <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Personal_Life')}>Personal Life</button>

@@ -5,7 +5,7 @@ const Professional_Experience = () => {
 const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="container">
             <div>
                 <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Education')}>Education</button>
@@ -27,7 +27,6 @@ const navigate = useNavigate();
                 <a href="https://www.linkedin.com/in/taylortillander/"
                    target="_blank" 
                    rel="noopener noreferrer"
-                   style={{ textDecoration: 'none', color: 'black' }}
                 >
                     <div>Connect with me on LinkedIn!</div>
                     

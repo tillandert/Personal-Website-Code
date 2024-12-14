@@ -5,7 +5,7 @@ const Personal_Life = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="container">
             <div>
                 <button onClick={() => navigate('/')}>Home</button>
                 <button onClick={() => navigate('/Education')}>Education</button>
@@ -23,7 +23,6 @@ const Personal_Life = () => {
                 <a href="https://www.instagram.com/tillander_t"
                    target="_blank" 
                    rel="noopener noreferrer"
-                   style={{ textDecoration: 'none', color: 'black' }}
                 >
                     <div>Follow me on Instagram!</div>
                     
