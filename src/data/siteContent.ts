@@ -288,12 +288,6 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
           'GitHub is the central place where I publish code, test ideas, and make my technical progression visible over time.',
         icon: FiGithub,
       },
-      {
-        title: 'Portfolio utility',
-        description:
-          'A strong portfolio is not just a list of repos. It should make it easy for someone to understand the substance of the work quickly.',
-        icon: FiTarget,
-      },
     ],
     links: [
       {

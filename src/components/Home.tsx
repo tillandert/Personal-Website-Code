@@ -15,14 +15,14 @@ const Home = () => {
           </h2>
 
           <div className="button-row">
-            <Link className="button button-primary" to="/experience">
+            <Link className="button button-secondary" to="/experience">
               View experience
             </Link>
             <Link className="button button-secondary" to="/projects">
               Explore projects
             </Link>
             <a
-              className="button button-ghost"
+              className="button button-secondary"
               href={resumeHref}
               rel="noreferrer"
               target="_blank"
