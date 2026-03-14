@@ -38,6 +38,8 @@ type ExternalLink = {
   href: string;
   description: string;
   icon: IconType;
+  download?: boolean;
+  qrSrc?: string;
 };
 
 type ContentCard = {
@@ -70,6 +72,11 @@ export type SectionContent = {
   cards: ContentCard[];
   links: ExternalLink[];
   media: MediaItem[];
+  resume?: {
+    title: string;
+    description: string;
+    href: string;
+  };
 };
 
 export const navItems: NavItem[] = [
@@ -83,7 +90,7 @@ export const navItems: NavItem[] = [
 export const homeStats: Stat[] = [
   { label: 'Degree', value: 'B.S. Computer Engineering' },
   { label: 'Current role', value: 'Software Engineer' },
-  { label: 'Focus', value: 'Reliable product delivery' },
+  { label: 'Focus', value: 'Engineering + AI/ML growth' },
 ];
 
 export const homeHighlights: Highlight[] = [
@@ -101,7 +108,7 @@ export const homeHighlights: Highlight[] = [
   },
   {
     title: 'Projects',
-    description: 'Hands-on work that reflects how I build, learn, and iterate on technical problems.',
+    description: 'Hands-on builds that show execution quality, learning velocity, and product thinking.',
     path: '/projects',
     icon: FiCode,
   },
@@ -134,20 +141,22 @@ export const profileLinks: ExternalLink[] = [
   },
 ];
 
+const resumeUrl = assetUrl('TaylorTillanderResume.pdf');
+
 export const sectionContent: Record<'education' | 'personalLife' | 'professionalExperience' | 'projects', SectionContent> = {
   education: {
     eyebrow: 'Foundation',
-    title: 'Built on engineering fundamentals and range.',
+    title: 'Built on engineering fundamentals and range',
     summary:
-      'My academic background gave me a strong technical base across software, hardware-adjacent systems, and applied machine intelligence.',
+      'My academic background built a strong technical base across software systems, computer engineering fundamentals, and applied machine intelligence.',
     intro:
-      'I graduated from the University of Florida in December 2025 with a Bachelor of Science in Computer Engineering. The strongest outcome from that experience was breadth without losing rigor: I learned how to reason about systems, not just individual tools.',
+      'I graduated from the University of Florida in December 2025 with a Bachelor of Science in Computer Engineering. That training emphasized both depth and breadth: algorithmic thinking, systems reasoning, and the ability to translate technical work into practical outcomes.',
     badges: ['University of Florida', 'B.S. Computer Engineering', 'December 2025'],
     cards: [
       {
         title: 'Core technical coursework',
         description:
-          'My coursework included Data Structures and Algorithms, Computer Architecture, Software Engineering, Artificial Intelligence, and Machine Learning.',
+          'My coursework included Data Structures and Algorithms, Signal Processing, Software Engineering, Artificial Intelligence, and Machine Learning.',
         icon: FiLayers,
       },
       {
@@ -171,14 +180,15 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
     ],
     links: [],
     media: [],
+    resume: undefined,
   },
   personalLife: {
     eyebrow: 'Balance',
-    title: 'Discipline outside work reinforces how I operate inside it.',
+    title: 'Discipline outside work reinforces how I operate inside it',
     summary:
-      'The habits I value most are consistency, effort over time, and enjoying the process. That carries directly into how I learn and build software.',
+      'The same habits that matter in engineering work also show up outside of work: consistency, discipline, and steady long-term progress.',
     intro:
-      'I enjoy working out, running, tennis, video games, and spending time with friends. Training for a marathon after completing my first half marathon has pushed me to stay process-oriented and patient with long-term goals.',
+      'Outside of engineering, I spend time running, strength training, tennis, and staying active with friends and community. Training goals, especially in endurance events, reinforce consistency and accountability that carry directly into professional work.',
     badges: ['Running', 'Strength training', 'Tennis', 'Community'],
     cards: [
       {
@@ -212,25 +222,19 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
         href: 'https://www.instagram.com/tillander_t',
         description: 'A more personal view of what I am doing outside of work.',
         icon: FiInstagram,
+        qrSrc: assetUrl('instagram_qr.png'),
       },
     ],
-    media: [
-      {
-        kind: 'image',
-        title: 'Instagram QR',
-        src: assetUrl('instagram_qr.png'),
-        alt: 'Instagram QR code',
-        caption: 'GitHub Pages can serve this image directly because it lives in the public assets for the site.',
-      },
-    ],
+    media: [],
+    resume: undefined,
   },
   professionalExperience: {
     eyebrow: 'Work',
-    title: 'Experience centered on dependable software delivery.',
+    title: 'Building dependable software today, with long-term growth across technical and business leadership.',
     summary:
-      'I care about writing software that is maintainable, useful, and grounded in how teams actually ship work.',
+      'I focus on writing maintainable software, shipping reliably in team environments, and growing into larger ownership over systems and outcomes.',
     intro:
-      'I currently work at JPMorgan Chase in Tampa as a Software Engineer in the SEP program. My internship path before that helped me build a practical foundation across frontend work, scripting, and engineering in real team environments.',
+      'I currently work at JPMorgan Chase in Tampa as a Software Engineer in the SEP program. Prior internships strengthened practical engineering skills across frontend development, scripting, and working effectively on delivery-focused teams.',
     badges: ['Software Engineer', 'SEP Program', 'Tampa, FL'],
     cards: [
       {
@@ -248,15 +252,9 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
       {
         title: 'Career direction',
         description:
-          'I am especially interested in growing into stronger product and systems ownership while continuing to deepen core software engineering skills.',
+          'Long-term career direction includes continued growth in software engineering and technical leadership, optional graduate study in CS focused on AI/ML applications, and selective product-building exploration over time.',
         icon: FiTrendingUp,
-      },
-      {
-        title: 'Communication and execution',
-        description:
-          'The best engineering work is not just technical. It requires clean communication, dependable follow-through, and an eye for the user-facing outcome.',
-        icon: FiZap,
-      },
+      }
     ],
     links: [
       {
@@ -264,37 +262,24 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
         href: 'https://www.linkedin.com/in/taylortillander/',
         description: 'Professional timeline, current role, and background details.',
         icon: FiLinkedin,
-      },
-      {
-        label: 'Resume link option',
-        href: 'https://drive.google.com/file/d/1znxd-zL1JcuVz7zVPG7cfHsxg5BYJe2i/view',
-        description: 'This can stay external or later be replaced with a hosted file like public/resume.pdf.',
-        icon: FiBookOpen,
-      },
+        qrSrc: assetUrl('linkedin_qr.jpeg'),
+      }
     ],
-    media: [
-      {
-        kind: 'iframe',
-        title: 'Resume preview',
-        src: 'https://drive.google.com/file/d/1znxd-zL1JcuVz7zVPG7cfHsxg5BYJe2i/preview',
-        caption: 'GitHub Pages can also display a resume from your own repo if you add a PDF to public/ and link or embed it.',
-      },
-      {
-        kind: 'image',
-        title: 'LinkedIn QR',
-        src: assetUrl('linkedin_qr.jpeg'),
-        alt: 'LinkedIn QR code',
-        caption: 'This QR asset is served directly from the repository and works cleanly with the GitHub Pages base path.',
-      },
-    ],
+    media: [],
+    resume: {
+      title: 'Resume',
+      description:
+        'For a full view of experience, technical background, and project work, open the hosted PDF directly in-browser or download a copy.',
+      href: resumeUrl,
+    },
   },
   projects: {
     eyebrow: 'Builds',
-    title: 'Projects that show how I think, learn, and ship.',
+    title: 'Projects that show how I think, learn, and ship',
     summary:
-      'The best way to evaluate engineering growth is to look at the work itself: what was built, how it was structured, and whether it keeps improving.',
+      'Projects are the clearest signal of engineering execution: what was built, how tradeoffs were handled, and how ideas evolved over time.',
     intro:
-      'My GitHub captures the projects and experiments that matter most as I continue building experience. Over time this section can expand from a single external link into featured case studies with screenshots, outcomes, and technical decisions.',
+      'This section highlights the work behind my technical development. The portfolio will continue expanding with deeper case studies, implementation details, and measurable outcomes as new projects ship.',
     badges: ['GitHub portfolio', 'Iterative learning', 'Case study ready'],
     cards: [
       {
@@ -302,18 +287,6 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
         description:
           'GitHub is the central place where I publish code, test ideas, and make my technical progression visible over time.',
         icon: FiGithub,
-      },
-      {
-        title: 'Room to grow',
-        description:
-          'This page is now structured to support richer project cards later without having to redesign the whole site again.',
-        icon: FiLayers,
-      },
-      {
-        title: 'Implementation focus',
-        description:
-          'I value projects that move past novelty and show execution quality, tradeoff awareness, and clear technical communication.',
-        icon: FiCode,
       },
       {
         title: 'Portfolio utility',
@@ -331,5 +304,6 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
       },
     ],
     media: [],
+    resume: undefined,
   },
 };

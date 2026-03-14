@@ -1,7 +1,34 @@
+import { useEffect, useState } from 'react';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import { NavLink, Outlet } from 'react-router-dom';
 import { navItems, profileLinks } from '../data/siteContent';
 
+type ThemeMode = 'light' | 'dark';
+
+const getInitialTheme = (): ThemeMode => {
+  const storedTheme = window.localStorage.getItem('theme-mode');
+
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    return storedTheme;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
 const AppLayout = () => {
+  const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('theme-mode', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  const ThemeIcon = theme === 'light' ? FiMoon : FiSun;
+
   return (
     <div className="app-shell">
       <div className="page-glow page-glow-left" />
@@ -10,14 +37,16 @@ const AppLayout = () => {
       <div className="site-frame">
         <header className="site-header fade-in-up">
           <div className="brand-lockup">
-            <span className="brand-kicker">Taylor Tillander</span>
-            <h1 className="brand-title">Software engineer with product discipline and range.</h1>
-            <p className="brand-subtitle">
-              Built to present work clearly, deploy cleanly on GitHub Pages, and grow with new projects, writing, and a hosted resume.
-            </p>
+            <h1 className="brand-name">Taylor Tillander</h1>
+            <p className="brand-title">Software Engineer from Tallahassee, FL</p>
           </div>
 
           <div className="header-actions">
+            <button aria-label="Toggle dark mode" className="button button-ghost theme-toggle" onClick={toggleTheme} type="button">
+              <ThemeIcon className="button-icon" />
+              <span>{theme === 'light' ? 'Dark mode' : 'Light mode'}</span>
+            </button>
+
             {profileLinks.slice(0, 2).map((link) => (
               <a className="button button-ghost" href={link.href} key={link.label} rel="noreferrer" target="_blank">
                 {link.label}
@@ -42,10 +71,6 @@ const AppLayout = () => {
         <main className="site-main">
           <Outlet />
         </main>
-
-        <footer className="site-footer">
-          Hosted-ready for GitHub Pages. Add `public/resume.pdf` when you want a first-party resume link instead of an external document host.
-        </footer>
       </div>
     </div>
   );

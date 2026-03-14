@@ -7,7 +7,7 @@ type SectionPageProps = {
 const SectionPage = ({ section }: SectionPageProps) => {
   return (
     <section className="section-page">
-      <div className="section-hero fade-in-up">
+      <div className="section-header fade-in-up">
         <span className="section-eyebrow">{section.eyebrow}</span>
         <h2 className="section-title">{section.title}</h2>
         <p className="section-summary">{section.summary}</p>
@@ -22,7 +22,7 @@ const SectionPage = ({ section }: SectionPageProps) => {
         </div>
       </div>
 
-      <div className="section-grid">
+      <div className="section-card-grid">
         {section.cards.map((card) => {
           const Icon = card.icon;
 
@@ -38,27 +38,59 @@ const SectionPage = ({ section }: SectionPageProps) => {
             </article>
           );
         })}
+
+        {section.links.map((link) => {
+          const Icon = link.icon;
+
+          return (
+            <article className="link-card fade-in-up" key={link.label}>
+              <div className="card-icon-wrap">
+                <Icon className="card-icon" />
+              </div>
+              <div>
+                <h3>{link.label}</h3>
+                <p>{link.description}</p>
+              </div>
+
+              <div className="link-card-actions">
+                <a
+                  className="inline-link"
+                  download={link.download}
+                  href={link.href}
+                  rel={link.download ? undefined : 'noreferrer'}
+                  target={link.download ? undefined : '_blank'}
+                >
+                  {link.download ? 'Download file' : 'Open link'}
+                </a>
+
+                {link.qrSrc ? (
+                  <details className="qr-details">
+                    <summary>View QR code</summary>
+                    <img alt={`${link.label} QR code`} className="inline-qr" src={link.qrSrc} />
+                  </details>
+                ) : null}
+              </div>
+            </article>
+          );
+        })}
       </div>
 
-      {section.links.length > 0 ? (
-        <div className="link-grid">
-          {section.links.map((link) => {
-            const Icon = link.icon;
+      {section.resume ? (
+        <article className="resume-card fade-in-up">
+          <div className="resume-card-copy">
+            <h3>{section.resume.title}</h3>
+            <p>{section.resume.description}</p>
+          </div>
 
-            return (
-              <a className="link-card fade-in-up" href={link.href} key={link.label} rel="noreferrer" target="_blank">
-                <div className="card-icon-wrap">
-                  <Icon className="card-icon" />
-                </div>
-                <div>
-                  <h3>{link.label}</h3>
-                  <p>{link.description}</p>
-                </div>
-                <span className="inline-link">Open link</span>
-              </a>
-            );
-          })}
-        </div>
+          <div className="resume-actions">
+            <a className="button button-primary" href={section.resume.href} rel="noreferrer" target="_blank">
+              Open PDF
+            </a>
+            <a className="button button-secondary" download href={section.resume.href}>
+              Download PDF
+            </a>
+          </div>
+        </article>
       ) : null}
 
       {section.media.length > 0 ? (
@@ -71,7 +103,7 @@ const SectionPage = ({ section }: SectionPageProps) => {
               ) : (
                 <img alt={item.alt} className="media-image" src={item.src} />
               )}
-              <p className="media-caption">{item.caption}</p>
+              {item.caption ? <p className="media-caption">{item.caption}</p> : null}
             </article>
           ))}
         </div>
