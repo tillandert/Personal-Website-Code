@@ -35,6 +35,22 @@ const SectionPage = ({ section }: SectionPageProps) => {
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
+
+              {card.links?.length ? (
+                <div className="link-card-actions">
+                  {card.links.map((resource) => (
+                    <a
+                      className="inline-link"
+                      href={resource.href}
+                      key={`${card.title}-${resource.label}`}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {resource.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
             </article>
           );
         })}

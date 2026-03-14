@@ -46,6 +46,10 @@ type ContentCard = {
   title: string;
   description: string;
   icon: IconType;
+  links?: Array<{
+    label: string;
+    href: string;
+  }>;
 };
 
 type MediaItem =
@@ -168,7 +172,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
       {
         title: 'Professional development',
         description:
-          'Organizations like IEEE helped sharpen communication, collaboration, and the professional habits needed beyond the classroom.',
+          'Leadership and campus involvement, along with consistent Dean\'s List and President\'s Honor Roll recognition, sharpened communication and professional habits beyond the classroom.',
         icon: FiTrendingUp,
       },
       {
@@ -234,7 +238,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
     summary:
       'I focus on writing maintainable software, shipping reliably in team environments, and growing into larger ownership over systems and outcomes.',
     intro:
-      'I currently work at JPMorgan Chase in Tampa as a Software Engineer in the SEP program. Prior internships strengthened practical engineering skills across frontend development, scripting, and working effectively on delivery-focused teams.',
+      'I currently work at JPMorgan Chase in Tampa as a Software Engineer in the SEP program, building frontend software in React and TypeScript. Prior internships at BNY Mellon, Kratos, and Datamaxx strengthened practical skills across performance engineering, scripting, and production delivery.',
     badges: ['Software Engineer', 'SEP Program', 'Tampa, FL'],
     cards: [
       {
@@ -246,7 +250,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
       {
         title: 'Internship progression',
         description:
-          'Past internships gave me exposure to frontend development and simulation scripting, which helped widen both my toolset and engineering judgment.',
+          'Past internships ranged from frontend product work to Linux and Windows simulation scripting, which widened both my toolset and engineering judgment.',
         icon: FiLayers,
       },
       {
@@ -279,14 +283,43 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
     summary:
       'Projects are the clearest signal of engineering execution: what was built, how tradeoffs were handled, and how ideas evolved over time.',
     intro:
-      'This section highlights the work behind my technical development. The portfolio will continue expanding with deeper case studies, implementation details, and measurable outcomes as new projects ship.',
-    badges: ['GitHub portfolio', 'Iterative learning', 'Case study ready'],
+      'This section highlights the work behind my technical development, including production-minded frontend work, applied AI, and performance-focused builds.',
+    badges: ['GitHub portfolio', 'React + TypeScript', 'Applied AI/ML'],
     cards: [
       {
         title: 'Public project hub',
         description:
           'GitHub is the central place where I publish code, test ideas, and make my technical progression visible over time.',
         icon: FiGithub,
+      },
+      {
+        title: 'Stable Diffusion desktop app',
+        description:
+          'Developed a cross-platform desktop app with C#, CUDA, and FastAPI, reducing resource usage versus common web UI workflows while keeping generation performance practical.',
+        icon: FiCode,
+        links: [
+          {
+            label: 'Project repository',
+            href: 'https://github.com/SpicyBananaUI/StableDiffusionDestopApp',
+          },
+        ],
+      },
+      {
+        title: 'Cancer AI hackathon winner',
+        description:
+          'Won the 2025 UF Health Cancer AI Symposium hackathon by applying supervised machine learning to lung cancer metabolomics data and presenting key detection insights.',
+        icon: FiTarget,
+        links: [
+          {
+            label: 'Project repository',
+            href: 'https://github.com/npgilman/lung_cancer_metabolomics',
+          },
+          {
+            label: 'UF Health article',
+            href: 'https://cancer.ufl.edu/2025/11/14/cancer-ai-symposium-explores-how-ai-is-transforming-cancer-research-care/',
+          },
+          
+        ],
       },
     ],
     links: [
