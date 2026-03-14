@@ -146,7 +146,7 @@ const resumeUrl = assetUrl('TaylorTillanderResume.pdf');
 export const sectionContent: Record<'education' | 'personalLife' | 'professionalExperience' | 'projects', SectionContent> = {
   education: {
     eyebrow: 'Foundation',
-    title: 'Built on engineering fundamentals and range',
+    title: 'Engineering fundamentals and range',
     summary:
       'My academic background built a strong technical base across software systems, computer engineering fundamentals, and applied machine intelligence.',
     intro:
@@ -184,7 +184,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
   },
   personalLife: {
     eyebrow: 'Balance',
-    title: 'Discipline outside work reinforces how I operate inside it',
+    title: 'Discipline that carries into work',
     summary:
       'The same habits that matter in engineering work also show up outside of work: consistency, discipline, and steady long-term progress.',
     intro:
@@ -230,7 +230,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
   },
   professionalExperience: {
     eyebrow: 'Work',
-    title: 'Building dependable software today, with long-term growth across technical and business leadership.',
+    title: 'Building dependable software, growing into leadership',
     summary:
       'I focus on writing maintainable software, shipping reliably in team environments, and growing into larger ownership over systems and outcomes.',
     intro:
@@ -275,7 +275,7 @@ export const sectionContent: Record<'education' | 'personalLife' | 'professional
   },
   projects: {
     eyebrow: 'Builds',
-    title: 'Projects that show how I think, learn, and ship',
+    title: 'How I think, learn, and ship',
     summary:
       'Projects are the clearest signal of engineering execution: what was built, how tradeoffs were handled, and how ideas evolved over time.',
     intro:

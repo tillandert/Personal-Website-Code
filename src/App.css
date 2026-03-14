@@ -220,8 +220,8 @@
 .intro-title,
 .section-title {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(2.1rem, 4vw, 4rem);
-  line-height: 1;
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+  line-height: 1.1;
   margin-top: 18px;
 }
 
